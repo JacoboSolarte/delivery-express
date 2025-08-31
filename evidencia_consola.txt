@@ -1,0 +1,44 @@
+ArrayList original:
+[Pedido{producto='Hamburguesa', total=30.0, cliente='Juan'}, Pedido{producto='Pizza', total=45.0, cliente='Ana'}, Pedido{producto='Sushi', total=60.0, cliente='Luis'}, Pedido{producto='Ensalada', total=25.0, cliente='Marta'}, Pedido{producto='Pizza', total=50.0, cliente='Carlos'}]
+
+ArrayList con urgentes:
+[Pedido{producto='Arepa', total=15.0, cliente='Lucia'}, Pedido{producto='Tacos', total=20.0, cliente='Pedro'}, Pedido{producto='Hamburguesa', total=30.0, cliente='Juan'}, Pedido{producto='Pizza', total=45.0, cliente='Ana'}, Pedido{producto='Sushi', total=60.0, cliente='Luis'}, Pedido{producto='Ensalada', total=25.0, cliente='Marta'}, Pedido{producto='Pizza', total=50.0, cliente='Carlos'}]
+
+LinkedList inicial:
+[Pedido{producto='Arepa', total=15.0, cliente='Lucia'}, Pedido{producto='Tacos', total=20.0, cliente='Pedro'}, Pedido{producto='Hamburguesa', total=30.0, cliente='Juan'}, Pedido{producto='Pizza', total=45.0, cliente='Ana'}, Pedido{producto='Sushi', total=60.0, cliente='Luis'}, Pedido{producto='Ensalada', total=25.0, cliente='Marta'}, Pedido{producto='Pizza', total=50.0, cliente='Carlos'}]
+
+LinkedList con urgentes:
+[Pedido{producto='Pollo', total=28.0, cliente='Paula'}, Pedido{producto='Perro caliente', total=18.0, cliente='Mario'}, Pedido{producto='Arepa', total=15.0, cliente='Lucia'}, Pedido{producto='Tacos', total=20.0, cliente='Pedro'}, Pedido{producto='Hamburguesa', total=30.0, cliente='Juan'}, Pedido{producto='Pizza', total=45.0, cliente='Ana'}, Pedido{producto='Sushi', total=60.0, cliente='Luis'}, Pedido{producto='Ensalada', total=25.0, cliente='Marta'}, Pedido{producto='Pizza', total=50.0, cliente='Carlos'}]      
+
+ Explicación: Si fueran 1000 pedidos urgentes, LinkedList es más eficiente porque insertar al inicio es O(1), mientras que en ArrayList es O(n).
+
+HashSet con duplicados eliminados:
+[Pedido{producto='Arepa', total=15.0, cliente='Lucia'}, Pedido{producto='Pizza', total=45.0, cliente='Ana'}, Pedido{producto='Ensalada', total=25.0, cliente='Marta'}, Pedido{producto='Pizza', total=50.0, cliente='Carlos'}, Pedido{producto='Tacos', total=20.0, cliente='Pedro'}, Pedido{producto='Hamburguesa', total=30.0, cliente='Juan'}, Pedido{producto='Sushi', total=60.0, cliente='Luis'}]
+? Los duplicados no se permiten en HashSet.
+
+Pedidos por cliente:
+Marta -> [Pedido{producto='Ensalada', total=25.0, cliente='Marta'}]
+Ana -> [Pedido{producto='Pizza', total=45.0, cliente='Ana'}]
+Lucia -> [Pedido{producto='Arepa', total=15.0, cliente='Lucia'}]
+Luis -> [Pedido{producto='Sushi', total=60.0, cliente='Luis'}]
+Pedro -> [Pedido{producto='Tacos', total=20.0, cliente='Pedro'}]
+Juan -> [Pedido{producto='Hamburguesa', total=30.0, cliente='Juan'}]
+Carlos -> [Pedido{producto='Pizza', total=50.0, cliente='Carlos'}]
+
+Pedidos de cliente específico (Ana):
+[Pedido{producto='Pizza', total=45.0, cliente='Ana'}]
+
+Total gastado por cada cliente:
+Marta gastó $25.0
+Ana gastó $45.0
+Lucia gastó $15.0
+Luis gastó $60.0
+Pedro gastó $20.0
+Juan gastó $30.0
+Carlos gastó $50.0
+
+Pedidos filtrados: Producto Pizza
+[Pedido{producto='Pizza', total=45.0, cliente='Ana'}, Pedido{producto='Pizza', total=50.0, cliente='Carlos'}]
+
+Pedidos filtrados: Total > 50
+[Pedido{producto='Sushi', total=60.0, cliente='Luis'}]
